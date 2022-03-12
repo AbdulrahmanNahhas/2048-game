@@ -5,8 +5,11 @@ container.addEventListener('swipe', function (e) {
         alert('right')
     } else if (e.detail.x[0] > e.detail.x[1] && (e.detail.y[0] + 150) >= e.detail.y[1] && (e.detail.y[0] - 150) <= e.detail.y[1]) {
         alert('left')
-    } else {
-        alert('hello, hi, bye!')
+    } else if (e.detail.y[0] > e.detail.y[1] && (e.detail.x[0] + 150) >= e.detail.x[1] && (e.detail.x[0] - 150) <= e.detail.x[1]) {
+        alert('top')
+    } else if (e.detail.y[0] < e.detail.y[1] && (e.detail.x[0] + 150) >= e.detail.x[1] && (e.detail.x[0] - 150) <= e.detail.x[1]) {
+        alert('down')
     }
-    console.log('bad luck')
+
+    console.log('hello, hi, bye!')
 });
