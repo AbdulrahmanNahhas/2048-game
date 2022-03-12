@@ -8,4 +8,5 @@ container.addEventListener('swipe', function (e) {
     } else {
         alert('hello, hi, bye!')
     }
+    console.log('bad luck')
 });
