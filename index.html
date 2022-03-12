@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulrahman Nahhas - 2048</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="intro">
+
+    <div class="header">
+        <div class="best">Best Score: <span class="bestScoreNumber">??</span></div>
+    </div>
+
+    <a href="./game.html" class="btn">
+        Start
+    </a>
+
+    <script>
+        const bestScore = document.querySelector('.bestScoreNumber');
+        let score = 0;
+        bestScore.textContent = score
+        for (let i = 0; i < localStorage.BestScore; i++) {
+            setTimeout(() => {
+                console.log(score);
+                score += 1
+                bestScore.textContent = score
+            }, 250);
+        }
+        // bestScore.textContent = localStorage.BestScore
+    </script>
+</body>
+
+</html>
